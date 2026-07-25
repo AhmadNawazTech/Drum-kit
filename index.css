@@ -1,0 +1,89 @@
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+    color: white;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+#title {
+    font-size: 4rem;
+    margin-top: 50px;
+    letter-spacing: 3px;
+    text-shadow: 0 5px 15px rgba(0,0,0,.5);
+}
+
+.set {
+    margin-top: 80px;
+}
+
+.drum {
+    width: 150px;
+    height: 150px;
+    margin: 15px;
+
+    border: none;
+    border-radius: 20px;
+
+    font-size: 55px;
+    font-weight: bold;
+    color: white;
+
+    background-color: #1e293b;
+    background-size: cover;
+    background-position: center;
+
+    box-shadow: 0 10px 25px rgba(0,0,0,.4);
+
+    transition: all .3s ease;
+
+    cursor: pointer;
+}
+
+.drum:hover {
+    transform: translateY(-8px) scale(1.05);
+    box-shadow: 0 18px 35px rgba(0,0,0,.6);
+}
+
+.drum:active {
+    transform: scale(.95);
+}
+
+footer {
+    margin-top: 80px;
+    color: rgba(255,255,255,.7);
+}
+.w {
+    background-image: url("./images/image1.png");
+}
+
+.a {
+    background-image: url("./images/image2.png");
+}
+
+.s {
+    background-image: url("./images/image3.png");
+}
+
+.d {
+    background-image: url("./images/image4.png");
+}
+
+.j {
+    background-image: url("./images/image5.png");
+}
+
+.k {
+    background-image: url("./images/image6.png");
+}
+
+.l {
+    background-image: url("./images/image7.png");
+}
