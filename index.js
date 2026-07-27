@@ -1,9 +1,19 @@
+//Detecting button press.
 var numberOfButtons = document.querySelectorAll(".drum").length;
 for (var i = 0; i< numberOfButtons; i++) {
 document.querySelectorAll(".drum")[i].addEventListener("click", function() {
- var buttonInnerHTML = this.innerHTML;
-
-        switch (buttonInnerHTML) {
+var buttonInnerHTML = this.innerHTML;
+makeSound(buttonInnerHTML);
+buttonAnimation(buttonInnerHTML);        
+});
+}
+//Detecting keyboard press..
+    document.addEventListener("keypress", function() {
+    makeSound(event.key);
+    buttonAnimation(event.key)
+});
+function makeSound(key) {
+switch (key) {   
 
             case "w":
                 var audio = new Audio("./sounds/beat1.wav");
@@ -34,8 +44,13 @@ document.querySelectorAll(".drum")[i].addEventListener("click", function() {
                 audio.play();
                 break;   
             default:
-                console.log("Please press correct key!");     
+                console.log("Please press correct key!");    
 }
-
-});
+}
+    function buttonAnimation (currentKey){
+    var activeButton =  document.querySelector("." + currentKey);
+    activeButton.classList.add("pressed");
+    setTimeout(function() {
+    activeButton.classList.remove("pressed");
+    }, 200);
 }
